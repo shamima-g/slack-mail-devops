@@ -70,9 +70,9 @@ This solution was developed in the Linx Designer `v5.21.0.0`
    
 #### Configure the Solution's $.Settings with your email details :
 
-Linx email configuration will help you get started with email plugin in Linx.
+> [Linx email configuration](https://linx.software/docs/reference/plugins/email/content/reademail/?utm_source=linx&utm_medium=designer&utm_campaign=help) will help you get started with email plugin in Linx.
 
-This sample was setup using a Gmail instance.
+> _This sample was setup using a Gmail instance._
 
 1. `GmailUserName:` Username of your email account.
 2. `GmailPassword:` App password.
