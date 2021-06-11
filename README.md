@@ -1,13 +1,12 @@
-# Slack - DevOps Management
+# Slack - mail DevOps Management
 
 ## Overview
 
 The provided sample includes:
 - Get a bot user token in Slack
-- Get a list of channels in a Slack Team
-- Post formatted messages to Slack in different channels using Bot User . 
+- Send email notifications from Gmail. The sample Solution sends out emails' summary in formatted messages to Slack from your configured Gmail account. You can post messages to any channel you want to alert containing the information concerning the mails you want to pass on.
 
-This sample shows how Linx automatically post formatted messages to Slack.
+This sample shows how Linx automatically reads emails from GMail and post formatted messages to Slack.
 Once this Slack integration is active, the sample posts messages to Slack Channel. 
 
 ---
@@ -18,6 +17,7 @@ Once this Slack integration is active, the sample posts messages to Slack Channe
 - [Test apis from browser](https://api.slack.com/methods/chat.postMessage/test)
 - [Slack reference for block kit](https://api.slack.com/reference/block-kit)
 - [How to find your Channel Id in Slack](https://stackoverflow.com/questions/40940327/what-is-the-simplest-way-to-find-a-slack-team-id-and-a-channel-id) 
+- [How to use the ReadEmail plugin from Linx](https://linx.software/docs/reference/plugins/email/content/reademail/?utm_source=linx&utm_medium=designer&utm_campaign=help)
 ---
 
 ## Dependencies
@@ -26,6 +26,7 @@ Once this Slack integration is active, the sample posts messages to Slack Channe
 
 - Linx Designer
 - Slack account
+- Gmail account
 
 ### Linx Designer
 
@@ -64,8 +65,7 @@ This solution was developed in the Linx Designer `v5.21.0.0`
 
 #### Configure the Solution's $.Settings for Slack :
 1. `SlackBotUserOAuth`: Paste the **token** copied above
-2. `JSONSampleFile`: Sample JSON text file path
-3. `SlackUri` : Slack API Url.  
+2. `SlackUri` : Slack API Url.  
        
 ---
 
@@ -94,11 +94,7 @@ A function to test if you've entered the right token and the right channel.  Tes
 Calls the Post message API https://api.slack.com/methods/chat.postMessage
 - Parameters:
    - `blocks` : JSON format as string type.     
-### GetChannels  
-Calls the Get API https://api.slack.com/methods/conversations.list.  Lists all channels in a Slack team.
-
-### GetChannelForName
-Gets the Channel's name.
+### 
 
 ---
 ## Running the Sample
