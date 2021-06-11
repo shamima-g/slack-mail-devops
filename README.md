@@ -65,9 +65,19 @@ This solution was developed in the Linx Designer `v5.21.0.0`
 
 #### Configure the Solution's $.Settings for Slack :
 1. `SlackBotUserOAuth`: Paste the **token** copied above
-2. `SlackUri` : Slack API Url.  
-       
----
+2. `SlackUri` : Slack API Url. 
+3. `SlackChannel` : Channel yo post messages
+   
+#### Configure the Solution's $.Settings with your email details :
+
+Linx email configuration will help you get started with email plugin in Linx.
+
+This sample was setup using a Gmail instance.
+
+1. `GmailUserName:` Username of your email account.
+2. `GmailPassword:` App password.
+
+--
 
 ## Using the sample
 
@@ -87,32 +97,16 @@ Accept: application/x-www-form-urlencoded , application/json
 A function to test if you've entered the right token and the right channel.  Tests the api https://slack.com/api/auth.test.
 ### BuildSampleBlock
 - Parameters:
-    - `HeaderText` :  string type. 
+    - `email`: Linx type. 
 - Result: 
-    - `SectionText` : string type. 
+    - `blocks`: JSON format as string type. 
 ### PostMessageAPI 
 Calls the Post message API https://api.slack.com/methods/chat.postMessage
 - Parameters:
-   - `blocks` : JSON format as string type.     
-### 
-
+   - `blocks` : JSON format as string type.  
 ---
 ## Running the Sample
-### PostJSONMessageToSlack
-- Copy Paste the file **JSONSample.txt** to **C:\Work\slack\JSONSample.txt**
-- In the Demo Folder, Click on the function named PostJSONMessageToSlack.
-- Parameters
-    - `channelId` : Enter Channel Id to post message. 
-### PostMessageToAllChannels ###
-- In the Demo Folder, Click on the function named PostMessageToAllChannels to post to all channels.
- 
-### PostMessageToChannelForChannelName ###
-- In the Demo Folder, Click on the function named PostMessageToChannelForChannelName to post to a channel.
+### PostEmailContentsToSlack
+- In the Demo Folder, Click on the function named PostEmailContentsToSlack.
 
-### PostMessageToSlack ###
-- In the Demo Folder, click on the function named PostMessageToSlack to post to a channel.  
-- Parameters
-     - `Header Text` : Text to be displayed as header 
-     - `Section Text`: Text to be displayed in section 
-     - `ChannelId`: Channel Id
 
